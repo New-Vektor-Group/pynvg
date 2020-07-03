@@ -1,0 +1,41 @@
+# editors and ides
+.vscode/
+
+# directories
+
+build/
+.cache/
+dist/
+docs/_gh-pages
+.eggs/
+htmlcov/
+__pycache__/
+site/
+.tox/
+.vagrant/
+.venv/
+.pytest_cache/
+
+# files
+
+.coverage
+.DS_Store
+.env
+pip-delete-this-directory.txt
+pip-log.txt
+
+# patterns
+
+*~
+*.db
+*.egg
+*.egg-info
+*.log
+*.mo
+*.pot
+*.py[cod]
+*.so
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.sw[po]
