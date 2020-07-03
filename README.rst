@@ -1,6 +1,4 @@
-.. image:: https://github.com/lonagi/pynvg/content/pynvg.png
-
-|Build Status| |PyPI Latest Version| |Requires.io|
+.. image:: https://github.com/lonagi/pynvg/blob/master/content/pynvg.png?raw=true
 
 pynvg is a general purpose library by NVG
 
