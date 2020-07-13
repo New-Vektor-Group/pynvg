@@ -5,7 +5,8 @@ class OrdListTestCase(unittest.TestCase):
 
     def test_ordlist(self):
         expectedList=[72,101,108,108,111]
-        self.assertEqual(ordlist("Hello"),expectedList)
+        result=ordlist("Hello")
+        self.assertEqual(result,expectedList)
 
 if(__name__=="main"):
     unittest.main()
