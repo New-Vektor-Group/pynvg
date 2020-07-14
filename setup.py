@@ -3,7 +3,7 @@ from os.path import join, dirname
 
 __PACKAGE__='pynvg'
 __DESCRIPTION__='pynvg is a general purpose library by NVG'
-__VERSION__="0.0.6"
+__VERSION__="0.0.7"
 
 setup(
     name=__PACKAGE__,
