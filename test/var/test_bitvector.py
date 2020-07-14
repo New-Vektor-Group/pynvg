@@ -7,5 +7,11 @@ class BitVectorTestCase(unittest.TestCase):
         expected=bitvector(1)
         result=[1,0]
         self.assertEqual(result,expected)
+
+    def test_bitvectorTrue(self):
+        expected=bitvector(True)
+        result=[1,0]
+        self.assertEqual(result,expected)
+
 if(__name__=="main"):
     unittest.main()
