@@ -8,6 +8,11 @@ class BitVectorTestCase(unittest.TestCase):
         result=[1,0]
         self.assertEqual(result,expected)
 
+    def test_bitvector5(self):
+        expected=bitvector(2,5)
+        result=[0,1,0,0,0]
+        self.assertEqual(result,expected)
+
     def test_bitvectorTrue(self):
         expected=bitvector(True)
         result=[1,0]
