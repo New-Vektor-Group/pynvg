@@ -5,4 +5,4 @@ def abool(var):
 
 def bitvector(val,total=2):
 	#Returns a vector with zeros and only one where necessary
-	return [1 if i==val-1 else 0 for i in range(total)]
+	return [1 if i==val else 0 for i in range(total)]
