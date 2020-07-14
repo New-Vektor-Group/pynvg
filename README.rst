@@ -6,3 +6,8 @@ Installation
 ~~~~~~~~~~~~
 
   $ pip install pynvg
+
+Url PyPi
+~~~~~~~~~~~~
+
+<https://pypi.org/project/pynvg/>
