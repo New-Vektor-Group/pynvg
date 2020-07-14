@@ -9,5 +9,11 @@ def dolog(text,filename=None):
 	if filename is None:
 		filename="nvglog-"+dt.datetime.now().strftime("%m_%d_%Y__%H_%M_%S")+".txt"
 
+	try:
+		with open(filename,"r") as f:
+			temp=f.read()
+	except:
+		temp=""
+
 	with open(filename,"w") as f:
-		f.write("["+dt.datetime.now().strftime("%m_%d_%Y__%H_%M_%S")+"]: "+str(text)+"\n"+f.read())
+		f.write("["+dt.datetime.now().strftime("%m_%d_%Y__%H_%M_%S")+"]: "+str(text)+"\n"+temp)
