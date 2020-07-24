@@ -7,5 +7,8 @@ class IsPrimeTestCase(unittest.TestCase):
         result=isPrime(173)
         self.assertTrue(result)
 
+    def test_isprime_false(self):
+        result=isPrime(20)
+        self.assertFalse(result)
 if(__name__=="main"):
     unittest.main()
