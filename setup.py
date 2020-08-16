@@ -3,7 +3,7 @@ from os.path import join, dirname
 
 __PACKAGE__='pynvg'
 __DESCRIPTION__='pynvg is a general purpose library by NVG'
-__VERSION__="0.0.10"
+__VERSION__="0.1.2"
 
 setup(
     name=__PACKAGE__,
@@ -12,6 +12,7 @@ setup(
     description=__DESCRIPTION__,
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
     author="lonagi",
+    install_requires=["pycryptodome==3.4.3"],
     author_email='lonagi22@gmail.com',
     url="https://github.com/lonagi/pynvg",
 )
