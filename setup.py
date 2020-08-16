@@ -12,7 +12,7 @@ setup(
     description=__DESCRIPTION__,
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
     author="lonagi",
-    install_requires=["pycryptodome==3.4.3"],
+    install_requires=["pycryptodome==3.6.6"],
     author_email='lonagi22@gmail.com',
     url="https://github.com/lonagi/pynvg",
 )
