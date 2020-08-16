@@ -32,3 +32,28 @@ def symmetric_encrypt(message, key, verbose = False):
     if verbose:
         print(f'Message was encrypted into: {encrypted_message.hex()}')
     return encrypted_message
+def symmetric_decrypt(encr_message, key, verbose = False):
+    """Decripts the message using private_key and check it's hash
+        
+    :param encrypted_message: <object> Encrypted message
+    :param key: <object> symmetric key;
+    :return: <object> Message decripted with key
+            
+    """
+    key_MD5 = transform_password(key)   
+    
+    bsize = AES.block_size 
+    dsize = SHA256.digest_size*2
+    
+    iv = Random.new().read(bsize)
+    cipher = AES.new(key_MD5, AES.MODE_CFB, iv)
+    decrypted_message_with_hesh = cipher.decrypt(encr_message)[bsize:]
+    decrypted_message = decrypted_message_with_hesh[:-dsize]
+    digest = SHA256.new(decrypted_message).hexdigest()
+    
+    if digest==decrypted_message_with_hesh[-dsize:].decode():
+        if verbose:
+        	print(f"Success!\nEncrypted hash is {decrypted_message_with_hesh[-dsize:].decode()}\nDecrypted hash is {digest}")
+        return decrypted_message.decode()
+    else:
+        print(f"Encryption was not correct: the hash of decripted message doesn't match with encrypted hash\nEncrypted hash is {decrypted_message_with_hesh[-dsize:]}\nDecrypted hash is {digest}")
